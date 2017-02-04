@@ -1,12 +1,9 @@
-// Package level is an EXPERIMENTAL levelled logging package. The API will
-// definitely have breaking changes and may be deleted altogether. Be warned!
-//
-// To use the level package, create a logger as per normal in your func main,
-// and wrap it with level.New.
+// Package level is a levelled logging package. To use it, create a logger as
+// per normal in your func main, and wrap it with level.New.
 //
 //    var logger log.Logger
 //    logger = log.NewLogfmtLogger(os.Stderr)
-//    logger = level.New(logger, level.Config{Allowed: level.AllowInfoAndAbove}) // <--
+//    logger = level.New(logger, level.Config{Allowed: level.AllowInfoAndAbove})
 //    logger = log.NewContext(logger).With("ts", log.DefaultTimestampUTC)
 //
 // Then, at the callsites, use one of the level.Debug, Info, Warn, or Error
